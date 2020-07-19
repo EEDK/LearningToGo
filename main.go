@@ -2,19 +2,18 @@ package main
 
 import (
 	"fmt"
+	"math/cmplx"
 )
 
-func Sqrt(x float64) float64 {
-	const loop = 10
-	z := float64(1)
-
-	for i := 0 ; i < loop ; i++{
-		z = z - (z*z-x) / (2*z)
-	}
-
-	return z
-}
+var (
+	ToBe	bool		= false
+	MaxInt 	uint64		= 1<<64 - 1
+	z		complex128	= cmplx.Sqrt(-5 + 12i)
+)
 
 func main() {
-	fmt.Println(Sqrt(2))
+	const f = "%T(%v)\n"
+	fmt.Printf(f , ToBe, ToBe)
+	fmt.Printf(f, MaxInt, MaxInt)
+	fmt.Printf(f, z, z)
 }
