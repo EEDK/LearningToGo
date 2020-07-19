@@ -1,11 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
-var x , y , z int = 1 , 2 , 3
-var c , python , java = true , false , "no!"
+const Pi = math.Pi
 
 func main() {
-	fmt.Println(x,y,z, c,python,java)
+	const World = "안녕"
+	fmt.Println("Hello" , World)
+	fmt.Println("Haapy" , Pi, "Day")
+
+	const Truth = true
+	fmt.Println("Go rules" , Truth)
 }
 
